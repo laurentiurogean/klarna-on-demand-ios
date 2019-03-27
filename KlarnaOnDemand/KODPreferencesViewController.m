@@ -50,7 +50,7 @@
   [self.webView loadRequest:request];
 }
 
-- (void)handleUserErrorEvent {
+- (void)handleUserErrorEventWithPayload:(NSDictionary *)payload {
   if ([self.delegate respondsToSelector:@selector(klarnaPreferencesFailed:)]) {
     [self.delegate klarnaPreferencesFailed:self];
   }

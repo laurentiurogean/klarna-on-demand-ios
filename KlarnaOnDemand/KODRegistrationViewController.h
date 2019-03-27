@@ -28,7 +28,15 @@
  *  @param controller Controller that initiated the event.
  */
 @optional
-- (void)klarnaRegistrationFailed:(KODRegistrationViewController *)controller;
+- (void)klarnaRegistrationFailed:(KODRegistrationViewController *)controller withPayload:(NSDictionary *)payload;
+
+/**
+ *  Handler for registration WKWebView failure events.
+ *
+ *  @param controller Controller that initiated the event.
+ */
+@optional
+- (void)klarnaRegistrationFailed:(KODRegistrationViewController *)controller withError:(NSError *)error;
 
 /**
  *  Handler for Klarna registration cancelled event. 
