@@ -125,7 +125,12 @@ NSString *const UserTokenKey = @"user_token";
 
 #pragma mark Klarna preferences delegate
 
-- (void)klarnaPreferencesFailed:(KODPreferencesViewController *)controller {
+- (void)klarnaPreferencesFailed:(KODPreferencesViewController *)controller withPayload:(NSDictionary *)dictionary{
+  // Dismiss Klarna preferences view-controller.
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)klarnaPreferencesFailed:(KODPreferencesViewController *)controller withError:(NSError *)error {
   // Dismiss Klarna preferences view-controller.
   [self dismissViewControllerAnimated:YES completion:nil];
 }

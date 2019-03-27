@@ -34,6 +34,7 @@
  *  Handler for registration WKWebView failure events.
  *
  *  @param controller Controller that initiated the event.
+ *  @param error object
  */
 @optional
 - (void)klarnaRegistrationFailed:(KODRegistrationViewController *)controller withError:(NSError *)error;

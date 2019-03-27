@@ -15,7 +15,16 @@
  *  @param controller Controller that initiated the event.
  */
 @optional
--(void) klarnaPreferencesFailed:(KODPreferencesViewController *)controller;
+-(void) klarnaPreferencesFailed:(KODPreferencesViewController *)controller withPayload:(NSDictionary *)dictionary;
+
+/**
+ *  Handler for preferences-page failure navigation in WKWebView.
+ *
+ *  @param controller Controller that initiated the event.
+ *  @param error object
+ */
+@optional
+-(void) klarnaPreferencesFailed:(KODPreferencesViewController *)controller withError:(NSError *)error;
 
 /**
  *  Handler for Klarna preferences-page close events.
